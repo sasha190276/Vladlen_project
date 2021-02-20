@@ -1,0 +1,32 @@
+/* {
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+   "globals": {
+      "document": false
+    }
+} */
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+   "globals": {
+      "document": false
+  }
+}
