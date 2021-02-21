@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const styles = {
   li: {
     display: 'flex',
-    justufyContent: ' space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
     padding: '.5rem 1rem',
     border: '1px solid #ccc',
@@ -18,17 +18,20 @@ function TodoItem({ todo, index }) {
     <li style={styles.li}>
       <span>
         <input type="checkbox" />
-
         <strong>{index + 1}</strong>
         {todo.title}
       </span>
-      <button>&times;</button>
+      <button type="button">&times;</button>
     </li>
   );
 }
 
+TodoItem.defaultProps = {
+  index: null,
+};
+
 TodoItem.propTypes = {
-  todo: PropTypes.object.isRequired,
+  todo: PropTypes.shape({}).isRequired,
   index: PropTypes.number,
 };
 
